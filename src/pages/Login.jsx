@@ -66,7 +66,7 @@ export default function Login() {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="admin@attendance.com"
+                  placeholder="Please provide your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -96,3 +96,4 @@ export default function Login() {
     </div>
   );
 }
+
