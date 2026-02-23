@@ -48,7 +48,7 @@ export default function FacultyReports() {
     try {
       const token = localStorage.getItem('accessToken');
       const res = await fetch(
-        `/api/faculty/reports/export/csv?subjectId=${selectedSubject._id}&sectionId=${selectedSection._id}&month=${month}&year=${year}`,
+        `https://manit-attsys-backend.onrender.com/api/faculty/reports/export/csv?subjectId=${selectedSubject._id}&sectionId=${selectedSection._id}&month=${month}&year=${year}`,
         { headers: { Authorization: `Bearer ${token}` }, credentials: 'include' }
       );
       const blob = await res.blob();
@@ -68,7 +68,7 @@ export default function FacultyReports() {
     try {
       const token = localStorage.getItem('accessToken');
       const res = await fetch(
-        `/api/faculty/reports/export/pdf?subjectId=${selectedSubject._id}&sectionId=${selectedSection._id}&month=${month}&year=${year}`,
+        `https://manit-attsys-backend.onrender.com/api/faculty/reports/export/pdf?subjectId=${selectedSubject._id}&sectionId=${selectedSection._id}&month=${month}&year=${year}`,
         { headers: { Authorization: `Bearer ${token}` }, credentials: 'include' }
       );
       const blob = await res.blob();
@@ -200,3 +200,4 @@ export default function FacultyReports() {
     </div>
   );
 }
+
