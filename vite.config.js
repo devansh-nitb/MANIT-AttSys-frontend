@@ -7,9 +7,10 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'https://manit-attsys-backend.onrender.com',
         changeOrigin: true
       }
     }
   }
 });
+
